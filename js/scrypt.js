@@ -18,3 +18,25 @@ function findDivider() {
 }
 
 buttonFind.addEventListener("click", findDivider);
+
+
+const numberInputOne = document.querySelector(".dividers__input_1");
+const numberInputTwo = document.querySelector(".dividers__input_2");
+const buttonFindDividers = document.querySelector(".dividers__button");
+const dividerResultTwo = document.querySelector(".result_2");
+
+
+function findDividers() {
+    var first = Number(numberInputOne.value);
+    var second = Number(numberInputTwo.value);
+    var commonDividers = [];
+    dividerResultTwo.innerHTML = `Общие делители чисел ${first} и ${second}: `;
+    for (let i = 0; i <= first; i++) {
+        if (first % i == 0) {
+            commonDividers.push(i);
+            dividerResultTwo.innerHTML += `<p>${i}</p> `;
+        }
+    }
+}
+
+buttonFindDividers.addEventListener("click", findDividers);

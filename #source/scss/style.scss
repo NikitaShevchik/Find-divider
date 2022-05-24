@@ -45,7 +45,7 @@ body{
         background-color: rgb(255, 208, 0);
 	}
 }
-.result{
+.result, .result_2{
     text-align: center;
     color: #fff;
     font-size: 30px;
@@ -53,3 +53,39 @@ body{
         padding: 5px 0;
     }
 }
+
+.dividers {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__inputs{
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+    
+    &__input {
+        display: block;
+        border: 1px solid rgb(128, 229, 255);
+        background-color: transparent;
+        color: #fff;
+        font-size: 30px;
+        padding: 10px 5px;
+    }
+
+    &__button {
+        font-size: 30px;
+        padding: 15px 10px;
+        border-radius: 5px;
+        margin-top: 20px; 
+        background-color: rgb(128, 229, 255);
+    }
+}
+

@@ -131,12 +131,63 @@ body {
   background-color: #ffd000;
 }
 
-.result {
+.result, .result_2 {
   text-align: center;
   color: #fff;
   font-size: 30px;
 }
 
-.result p {
+.result p, .result_2 p {
   padding: 5px 0;
+}
+
+.dividers {
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dividers__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dividers__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 50px;
+}
+
+.dividers__input {
+  display: block;
+  border: 1px solid #80e5ff;
+  background-color: transparent;
+  color: #fff;
+  font-size: 30px;
+  padding: 10px 5px;
+}
+
+.dividers__button {
+  font-size: 30px;
+  padding: 15px 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  background-color: #80e5ff;
 }
