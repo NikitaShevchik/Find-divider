@@ -10,13 +10,11 @@ function findDivider() {
     dividerResult.innerHTML = `Делители числа ${a}: `;
     for (let i = 0; i <= a; i++) {
         if (a % i == 0) {
-            dividers.push(i);   
+            dividers.push(i);
             dividerResult.innerHTML += `<p>${i}</p> `;
         }
     }
     //dividers.forEach(e => dividerResult.innerHTML += `${e} `);
 }
-
-
 
 buttonFind.addEventListener("click", findDivider);
