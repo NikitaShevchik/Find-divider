@@ -84,11 +84,12 @@ body {
 .content {
   max-width: 900px;
   margin: 0 auto;
+  padding: 0 20px 150px 20px;
 }
 
 .divider {
-  padding: 50px 0 20px 0;
-  max-width: 100%;
+  padding: 20px 0 0 0;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,7 +109,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 300px;
+  max-width: 300px;
 }
 
 .divider__input {
@@ -132,23 +133,28 @@ body {
 }
 
 .result, .result_2 {
+  padding: 20px 0;
   text-align: center;
   color: #fff;
   font-size: 30px;
 }
 
 .result p, .result_2 p {
-  padding: 5px 0;
+  padding: 0 0 5px 0;
+}
+
+.result p:last-child, .result_2 p:last-child {
+  padding: 0;
 }
 
 .dividers {
-  padding: 50px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
 }
 
 .dividers__content {
@@ -165,26 +171,38 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 .dividers__inputs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  gap: 50px;
+  gap: 20px;
+  width: 100%;
 }
 
 .dividers__input {
-  display: block;
   border: 1px solid #80e5ff;
   background-color: transparent;
   color: #fff;
   font-size: 30px;
   padding: 10px 5px;
+  display: block;
+}
+
+.dividers__input_1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  min-width: 100px;
+}
+
+.dividers__input_2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  min-width: 100px;
 }
 
 .dividers__button {
@@ -193,6 +211,10 @@ body {
   border-radius: 5px;
   margin-top: 20px;
   background-color: #80e5ff;
+  display: inline-block;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   width: 100%;
 }
 
@@ -206,8 +228,8 @@ body {
 
 .dividers__greatest {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   font-size: 30px;
   padding: 15px 40px;
   border-radius: 5px;
@@ -217,11 +239,25 @@ body {
 
 .dividers__multiple {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   font-size: 30px;
   padding: 15px 40px;
   border-radius: 5px;
   margin-top: 20px;
   background-color: #ff80ff;
+}
+
+@media (max-width: 340px) {
+  .dividers__inputs {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .dividers__gcdlcm {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .dividers__multiple {
+    margin: 0;
+  }
 }

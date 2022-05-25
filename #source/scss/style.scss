@@ -12,19 +12,18 @@ body{
 .content {
     max-width: 900px;
     margin: 0 auto;
-
+    padding: 0 20px 150px 20px;
 }
 .divider {
-    padding: 50px 0 20px 0;
-    max-width: 100%;
+    padding: 20px 0 0 0;
+    width: 100%;
     display: flex;
     justify-content: center;
-
     &__content{
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 300px;
+        max-width: 300px;
     }
 	&__input {
         display: block;
@@ -46,46 +45,57 @@ body{
 	}
 }
 .result, .result_2{
+    padding: 20px 0;
     text-align: center;
     color: #fff;
     font-size: 30px;
     p{
-        padding: 5px 0;
+        padding: 0 0 5px 0;
+        &:last-child{
+            padding: 0;
+        }
     }
 }
-
 .dividers {
-    padding: 50px 0;
     display: flex;
     justify-content: center;
+    width: 100%;
     &__content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
     }
-
     &__inputs{
         display: flex;
-        flex-direction: row;
-        gap: 50px;
+        gap: 20px;
+        width: 100%;
     }
-    
     &__input {
-        display: block;
         border: 1px solid rgb(128, 229, 255);
         background-color: transparent;
         color: #fff;
         font-size: 30px;
         padding: 10px 5px;
+        display: block;
+        &_1{
+            flex: 1 1 auto;
+            min-width: 100px;
+        }
+        &_2{
+            flex: 1 1 auto;
+            min-width: 100px;
+        }
     }
-
     &__button {
         font-size: 30px;
         padding: 15px 10px;
         border-radius: 5px;
         margin-top: 20px; 
         background-color: rgb(128, 229, 255);
+        display: inline-block;
+        flex: 1 1 auto;
         width: 100%;
     }
     &__gcdlcm{
@@ -93,9 +103,8 @@ body{
         width: 100%;
         gap: 20px;
     }
-
     &__greatest{
-        flex: 1 1 50%;
+        flex: 1 1 auto;
         font-size: 30px;
         padding: 15px 40px;
         border-radius: 5px;
@@ -103,7 +112,7 @@ body{
         background-color: rgb(128, 136, 255);
     }
     &__multiple{
-        flex: 1 1 50%;
+        flex: 1 1 auto;
         font-size: 30px;
         padding: 15px 40px;
         border-radius: 5px;
@@ -112,3 +121,14 @@ body{
     }
 }
 
+@media (max-width: 340px) {
+    .dividers__inputs{
+        flex-wrap: wrap;
+    }
+    .dividers__gcdlcm{
+        flex-wrap: wrap;
+    }
+    .dividers__multiple{
+        margin: 0;
+    }
+}
