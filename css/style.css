@@ -162,6 +162,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .dividers__inputs {
@@ -190,4 +193,13 @@ body {
   border-radius: 5px;
   margin-top: 20px;
   background-color: #80e5ff;
+  width: 100%;
+}
+
+.dividers__greatest {
+  font-size: 30px;
+  padding: 15px 40px;
+  border-radius: 5px;
+  margin-top: 20px;
+  background-color: #8088ff;
 }

@@ -57,3 +57,37 @@ function findDividers() {
     }
 }
 buttonFindDividers.addEventListener("click", findDividers);
+/*------------------GREATEST COMMON DEVIDER--------------------*/
+const gcdButton = document.querySelector(".dividers__greatest");
+gcdButton.addEventListener("click", gcd);
+function gcd() {
+    var first = Number(numberInputOne.value);
+    var second = Number(numberInputTwo.value);
+    var firstDivider = [];
+    var secondDivider = [];
+    var commonDividers = [];
+    for (let i = 0; i <= first; i++) {
+        if (first % i == 0) {
+            firstDivider.push(i);
+        }
+    }
+    for (let j = 0; j <= second; j++) {
+        if (second % j == 0) {
+            secondDivider.push(j);
+        }
+    }
+    if (firstDivider.length >= secondDivider.length) {
+        for (let k = 0; k <= secondDivider.length; k++) {
+            if (first % secondDivider[k] == 0) {
+                commonDividers.push(secondDivider[k]);
+            }
+        }
+    } else if (firstDivider.length < secondDivider.length) {
+        for (let k = 0; k <= firstDivider.length; k++) {
+            if (second % firstDivider[k] == 0) {
+                commonDividers.push(firstDivider[k]);
+            }
+        }
+    }
+    dividerResultTwo.innerHTML = `<p>НОД: ${commonDividers[commonDividers.length - 1]}</p>`;
+}
