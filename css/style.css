@@ -196,10 +196,32 @@ body {
   width: 100%;
 }
 
+.dividers__gcdlcm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
 .dividers__greatest {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
   font-size: 30px;
   padding: 15px 40px;
   border-radius: 5px;
   margin-top: 20px;
   background-color: #8088ff;
+}
+
+.dividers__multiple {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  font-size: 30px;
+  padding: 15px 40px;
+  border-radius: 5px;
+  margin-top: 20px;
+  background-color: #ff80ff;
 }

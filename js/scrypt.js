@@ -59,6 +59,8 @@ function findDividers() {
 buttonFindDividers.addEventListener("click", findDividers);
 /*------------------GREATEST COMMON DEVIDER--------------------*/
 const gcdButton = document.querySelector(".dividers__greatest");
+
+var greatComDivider;
 gcdButton.addEventListener("click", gcd);
 function gcd() {
     var first = Number(numberInputOne.value);
@@ -90,4 +92,43 @@ function gcd() {
         }
     }
     dividerResultTwo.innerHTML = `<p>НОД: ${commonDividers[commonDividers.length - 1]}</p>`;
+    greatComDivider = commonDividers[commonDividers.length - 1];
+    console.log(greatComDivider);
+}
+/*------------------LEAST COMMON MULTUPLE--------------------*/
+const leastCommonMultipleButton = document.querySelector(".dividers__multiple");
+
+leastCommonMultipleButton.addEventListener("click", lcm);
+
+function lcm() {
+    var first = Number(numberInputOne.value);
+    var second = Number(numberInputTwo.value);
+    var firstDivider = [];
+    var secondDivider = [];
+    var commonDividers = [];
+    for (let i = 0; i <= first; i++) {
+        if (first % i == 0) {
+            firstDivider.push(i);
+        }
+    }
+    for (let j = 0; j <= second; j++) {
+        if (second % j == 0) {
+            secondDivider.push(j);
+        }
+    }
+    if (firstDivider.length >= secondDivider.length) {
+        for (let k = 0; k <= secondDivider.length; k++) {
+            if (first % secondDivider[k] == 0) {
+                commonDividers.push(secondDivider[k]);
+            }
+        }
+    } else if (firstDivider.length < secondDivider.length) {
+        for (let k = 0; k <= firstDivider.length; k++) {
+            if (second % firstDivider[k] == 0) {
+                commonDividers.push(firstDivider[k]);
+            }
+        }
+    }
+    var leastMultiple = (first * second) / commonDividers[commonDividers.length - 1];
+    dividerResultTwo.innerHTML = `<p>НОК: ${leastMultiple}</p>`;
 }
