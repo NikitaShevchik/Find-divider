@@ -93,7 +93,6 @@ function gcd() {
     }
     dividerResultTwo.innerHTML = `<p>НОД: ${commonDividers[commonDividers.length - 1]}</p>`;
     greatComDivider = commonDividers[commonDividers.length - 1];
-    console.log(greatComDivider);
 }
 /*------------------LEAST COMMON MULTUPLE--------------------*/
 const leastCommonMultipleButton = document.querySelector(".dividers__multiple");
